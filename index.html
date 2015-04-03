@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+
+  <head>
+    <title>Tindercardsjs demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <style>
+      
+      body{
+        font-family: 'Helvetica-Neue', 'HelveticaNeue', arial, sans-serif;
+        color: #434343;
+      }
+      
+      .tc-card-name{
+        font-weight:normal;
+      }
+      
+      #main{
+        position:relative;
+        width:320px;
+        height:480px;
+        left:50%;
+        margin-left:-160px;
+      }
+    </style>
+    
+  </head>
+  
+  <body>
+    
+    <div id="main"></div>
+    
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/hammer/hammer.min.js"></script>
+    <script src="lib/tindercardsjs/tindercards.js"></script>
+    
+    <script>
+      $(document).ready(function () {
+        
+        // Define cards
+        var cards = [
+          new Tindercardsjs.card('Geordi Laforge', 'I like big butts', 'gfx/pics/01.jpg'),
+          new Tindercardsjs.card('Agro Picard', 'Hates Klingons, likes beer.', 'gfx/pics/02.jpg'),
+          new Tindercardsjs.card('Jean-Luc, Worf & William', 'Swipe right if you also like funny hats like us :D', 'gfx/pics/03.jpg')
+        ];
+        
+        // Render cards
+        Tindercardsjs.render(cards, $('#main'));
+      });
+    </script>
+    
+  </body>
+  
+</html>
